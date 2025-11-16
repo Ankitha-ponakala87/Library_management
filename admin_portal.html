@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    
+    <link rel="stylesheet" href="./styling/admin_portal.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/admin_portal.js"></script>
+    <link rel="icon" type="image/x-icon" href="./styling/images/logo.png">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1a5e30', 
+                        'accent-light': '#3b8252', 
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-10">
+
+    <div class="full-screen-bg">
+        
+        <header class="w-full bg-white bg-opacity-10 shadow-lg px-6 py-3 flex justify-between items-center fixed top-0 left-0 z-10">
+            <div class="heading">
+              <img src="./styling/images/navlogo.png" alt="SHELF WISE logo" id="portal-logo" class="h-14"> 
+            </div>
+               <button class="nav-button log-button" id="log_button">
+              <i class="fa fa-sign-out"></i> LogOut
+                </button>
+         </header>
+        
+        <main class="dashboard-grid w-full max-w-7xl mx-auto p-4 md:p-8 mt-24">
+            
+            <div class="sidebar-panel">
+                
+                <div class="profile-card bg-white p-6 rounded-xl shadow-md mb-6">
+                    <div class="image_user flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="75" height="75" viewBox="0 0 192 192" class="text-accent-light fill-current">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                <path d="M0,192v-192h192v192z" fill="none"></path>
+                                <path d="M96,192c-53.01934,0 -96,-42.98066 -96,-96v0c0,-53.01934 42.98066,-96 96,-96v0c53.01934,0 96,42.98066 96,96v0c0,53.01934 -42.98066,96 -96,96z" fill="#d1d5db"></path>
+                                <g fill="#4b5563"><g id="surface1"><path d="M96,40.32c-15.38812,0 -27.84,12.45188 -27.84,27.84c0,15.38813 12.45188,27.84 27.84,27.84c15.38813,0 27.84,-12.45187 27.84,-27.84c0,-15.38812 -12.45187,-27.84 -27.84,-27.84zM75.3375,105.7875c-26.29031,7.96594 -35.0175,29.58 -35.0175,29.58v16.3125h111.36v-16.3125c0,0 -8.72719,-21.61406 -35.0175,-29.58c-1.44094,10.14094 -10.14094,18.0525 -20.6625,18.0525c-10.52156,0 -19.22156,-7.91156 -20.6625,-18.0525z"></path></g></g>
+                            </svg>
+                        <h4 class="mt-3 text-lg font-semibold text-gray-700">Vanaja</h4>
+                        <p class="text-sm text-gray-500">Member ID: 2222</p>
+                    </div>
+                </div>
+                
+                <button class="nav-button" id="add_book_button" onclick="location.href='add_book.html'">
+                    <i class="fa fa-book"></i> Add Books
+                </button>
+                <button class="nav-button" id="buy_book" onclick="location.href='buy_book.html'">
+                    <i class="fa fa-heart"></i> Favorites
+                </button>
+                 <button class="nav-button" id="buy_book" onclick="location.href='buy_book.html'">
+                    <i class="fa fa-shopping-cart"></i> Wishlist
+                </button>
+                <button class="nav-button">
+                    <i class="fa fa-users"></i> Connect
+                </button>
+            </div>
+            
+            <div class="center-panel">
+                <h2 class="section-title">Profile</h2>
+                
+                <div class="flex flex-col md:flex-row gap-4 mb-6">
+                    <form class="Search w-full" id="users">
+                        <input type="text" id="search-userid" placeholder="Search Books" class="search-input">
+                        <button type="button" id="show_students" class="search-button">
+                            <i class="fa fa-search"></i> 
+                        </button>
+                    </form>
+                    <!-- <form class="Search w-full" id="Books_search">
+                        <input type="text" id="search-books" placeholder="Search Books" class="search-input">
+                        <button type="button" id="show_books" class="search-button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form> -->
+                </div>
+
+                <div class="main_user_block bg-white p-6 rounded-xl shadow-md min-h-96" id="Result"> 
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">User & Book Taken</h3>
+                    <p class="text-gray-300 mb-4">The information of user and book displayed .</p>
+                    <ul id="users" class="text-left space-y-2">
+                        <li class="p-2 border-b">Book ID: 1001 (A Tour of C++ 1st Edition)</li>
+                        <li class="p-2 border-b">Book ID: 2469 (Demons Slayer volume 3)</li>
+                    </ul>
+                    <ul id="books" class="text-left space-y-2 mt-4">
+                        <li class="p-2 border-b"> Hadith Collections Prophet Muhammad (Placeholder)</li>
+                        <li class="p-2 border-b">1602 - William Shakespeare's Hamlet (Placeholder)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="summary-panel">
+                <h2 class="section-title">Library</h2>
+                
+                <div class="stat-card bg-primary-dark text-white p-6 rounded-xl shadow-md mb-4">
+                    <i class="fa fa-book fa-2x mb-2 opacity-80"></i>
+                    <p class="text-3xl font-bold">12,450+</p>
+                    <p class="text-sm opacity-90">Total Books in Stock</p>
+                </div>
+                <div class="stat-card bg-white p-6 rounded-xl shadow-md mb-4 border-l-4 border-accent-light">
+                    <i class="fa fa-users fa-2x mb-2 text-accent-light"></i>
+                    <p class="text-3xl font-bold text-gray-800">895</p>
+                    <p class="text-sm text-gray-500">Active Registered Users</p>
+                </div>
+                <div class="stat-card bg-red-100 p-6 rounded-xl shadow-md border-l-4 border-red-500">
+                    <i class="fa fa-clock-o fa-2x mb-2 text-red-500"></i>
+                    <p class="text-3xl font-bold text-red-600">45 min</p>
+                    <p class="text-sm text-red-400">Last Visited</p>
+                    
+                </div>
+                <div>
+                  <button style="padding: 5px 102px 5px 105px; font-size: 10px; background-color: #FFDBAC; margin-top: 5px; color: rgb(0, 0, 0); border: none; border-radius: 40px;opacity: 0.75; cursor: pointer;">
+                    Delete Account
+                  </button>
+
+                </div>
+                
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+</body>
+</html>

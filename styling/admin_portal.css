@@ -1,0 +1,202 @@
+:root, body {
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    --primary-deep-green: #1C4D2A;
+    --secondary-mid-green: #377041;
+    --accent-light-green: #D4EDDA;
+    --text-dark: #333333;
+    --text-light: #F0F0F0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-image:
+        radial-gradient(
+            circle at 50% 20%, 
+            rgba(255, 255, 255, 0.07) 0%, 
+            rgba(255, 255, 255, 0) 60%
+        ),
+        linear-gradient(
+            to bottom,
+            #B0CE88 0%, 
+            #3F843D 55%, 
+            #163A15 100% 
+        );
+    background-color: #3F843D;
+    background-attachment: fixed;
+}
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 32px;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-deep-green);
+    margin-bottom: 20px;
+}
+
+#portal {
+    font-size: 1.875rem;
+    color: var(--primary-deep-green);
+}
+
+.text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--accent-light-green);
+}
+
+.nav-button {
+    font-size: 1rem;
+    color: var(--text-light);
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: var(--secondary-mid-green);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: var(--primary-deep-green);
+}
+
+.log-button {
+    background-color: #dc2626;
+    color: var(--text-light);
+    width: auto;
+    text-align: center;
+}
+.log-button:hover {
+    background-color: #b91c1c;
+}
+
+.Search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 1rem;
+    border: 1px solid var(--accent-light-green);
+    outline: none;
+    border-radius: 6px 0 0 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
+}
+
+.search-button {
+    background-color: var(--primary-deep-green);
+    color: var(--text-light);
+    padding: 0 15px;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 0 6px 6px 0;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: var(--secondary-mid-green);
+}
+
+#Result { 
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+    border: none; 
+    min-height: 400px;
+    overflow-y: auto; 
+    color: var(--text-dark);
+}
+
+#Result ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--accent-light-green);
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--accent-light-green);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card.bg-primary-dark {
+    background-color: var(--primary-deep-green);
+    color: var(--text-light);
+    border-color: var(--primary-deep-green);
+}
+
+.stat-card.bg-primary-dark .opacity-80 {
+    opacity: 1;
+    color: var(--text-light);
+}
+
+.stat-card.border-l-4.border-accent-light {
+    border-left-color: var(--secondary-mid-green);
+}
+.stat-card.border-l-4.border-accent-light .text-accent-light {
+    color: var(--secondary-mid-green);
+}
+
+
+.stat-card.bg-red-100 {
+    background-color: #fee2e2;
+    border-left-color: #ef4444;
+}
+.stat-card.bg-red-100 .text-red-500, .stat-card.bg-red-100 .text-red-600 {
+    color: #ef4444;
+}
+.stat-card.bg-red-100 .text-red-400 {
+    color: #f87171;
+}
+
+
+.profile-card, .main_user_block, .stat-card, header {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+body{
+    overflow-x: hidden;
+}

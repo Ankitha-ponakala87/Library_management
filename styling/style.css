@@ -1,0 +1,14 @@
+.form{
+     background-color: #add7ad;
+     /* border:2px solid black; */
+     padding:4%;
+     border-radius: 20px;
+     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.718);
+}
+h6:active{
+         color:white;
+}
+body {
+    background: linear-gradient(#B0CE88, #043915);
+    height: 100vh;
+}

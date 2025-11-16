@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelfwise. || Library Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="./styling/home.css">
+    <script src="https://kit.fontawesome.com/c2eab35dea.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./styling/images/logo.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <img src="./styling/images/navlogo.png" width="55">
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Category</a>
+                        <ul class="dropdown-menu" style="background-color:  #c0d7a2;">
+                            <li><a class="dropdown-item" href="./catalog.html#manga" target="_blank">Manga</a></li>
+                            <li><a class="dropdown-item" href="./catalog.html#horror" target="_blank">Horror</a></li>
+                            <li><a class="dropdown-item" href="./catalog.html#thriller" target="_blank">Mystery & Thriller</a></li>
+                            <li><a class="dropdown-item" href="./catalog.html#education" target="_blank">Education</a></li>
+                            <li><a class="dropdown-item" href="./catalog.html#kids" target="_blank">Kids</a></li>
+                            <li>
+                                <hr>
+                            </li>
+                            <li><a class="dropdown-item" href="./catalog.html/manga">View More</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="./admin_portal.html" target="_blank">Wishlist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+
+                <form class="d-flex ms-lg-3 mt-3 mt-lg-0">
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" class="searchbar" placeholder="Search for Books">
+                    </div>
+                </form>
+
+                <a href="./admin_portal.html" target="_blank" class="user-btn ms-lg-3">
+                    <abbr title="Profile"><i class="fa-solid fa-user"></i></abbr>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="homeheading container">
+            <h1>ShelfWise.</h1>
+            <p>
+                ShelfWise is a modern and well-organized library offering a smooth reading experience with neatly
+                categorized books.
+            </p>
+        </div>
+    </section>
+
+    <section id="news1">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div class="card m-5 p-5">
+                        <div class="card-body" style="backdrop-filter: blur(1px);">
+                            <h5 class="card-title">News Paper</h5>
+                            <p class="card-text">Make reading the newspaper a daily habit — a few minutes can keep you informed for a lifetime.</p>
+                            <a href="./styling/images/newspaper.pdf" target="_blank" class="card-link" style="background-color: #043915e0; padding: 10px; border-radius: 5px;">Read Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog">
+        <h2 class="text-center mb-4">Find By Generes</h2>
+        <div class="container d-flex flex-column" style="align-items: center;">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-9 generes">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                            aria-label="Slide 6"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="./catalog.html#manga" target="_blank"><img src="./styling/images/manga.png" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption">
+                                <h5>Manga</h5>
+                                <!-- <p>Some representative placeholder content for the third slide.</p> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./catalog.html#horror" target="_blank"><img src="./styling/images/horror.png" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption">
+                                <h5>Horror</h5>
+                                <!-- <p>Some representative placeholder content for the third slide.</p> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./catalog.html#education" target="_blank"><img src="./styling/images/study.png" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption">
+                                <h5>Education</h5>
+                                <!-- <p>Some representative placeholder content for the third slide.</p> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./catalog.htmlkids" target="_blank"><img src="./styling/images/fiction.png" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption">
+                                <h5>Fiction</h5>
+                                <!-- <p>Some representative placeholder content for the first slide.</p> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./catalog.html#thriller" target="_blank"><img src="./styling/images/mystery.png" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption">
+                                <h5>Mystery Thrillers</h5>
+                                <!-- <p>Some representative placeholder content for the third slide.</p> -->
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="./catalog.html#kids" target="_blank"><img src="./styling/images/history.png" class="d-block w-100" alt="..."></a>
+                            <div class="carousel-caption">
+                                <h5>History</h5>
+                                <!-- <p>Some representative placeholder content for the second slide.</p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="free" class="py-5" style="background-color: #e6ffdc;">
+        <h3 class="text-center" style="color: #043915;"><b>Free To Read</b></h3>
+        <h5 class="text-center m-4">A select collection of books is available for free to all readers.</h5>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card p-3 book-card">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1493694355i/35049196.jpg"
+                            class="card-img-top" style="width: 80%; align-self: center;">
+                        <h5 class="mt-2">Mahabharata in Telugu (మహాభారతం)</h5>
+                        <p>C. Rajagopalachari</p>
+                        <a href="./description_free.html" target="_blank"><button class="btn btn-success w-100">Read Now</button></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card p-3 book-card">
+                        <img src="https://m.media-amazon.com/images/I/81Bo83kXYCL._SY466_.jpg"
+                            class="card-img-top" style="width: 76%; align-self: center;">
+                        <h5 class="mt-4">Valmiki Ramayanam</h5>
+                        <p>HH Bhakti Vikasa Swami</p>
+                        <a href="./description_free.html" target="_blank"><button class="btn btn-success w-100">Read Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="continue" class="py-5" style="background-color: #043915;">
+        <h3 class="text-center mb-5" style="color: #e6ffdc;">Continue Reading</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card p-3 book-card">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1560396935i/36538793.jpg"
+                            class="card-img-top" style="width: 80%; align-self: center;">
+                        <h5 class="mt-2">Demon Slayer Vol.2</h5>
+                        <p>Koyoharu Gotouge</p>
+                        <a href="./description_free.html" target="_blank"><button class="btn btn-success w-100">Continue</button></a>
+                        <div class="progress">
+                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card p-3 book-card">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1356132971i/14744694.jpg"
+                            class="card-img-top" style="width: 88%; align-self: center;">
+                        <h5 class="mt-2">Python for Data Analysis</h5>
+                        <p>Wes McKinney</p>
+                        <a href="./description_free.html" target="_blank"><button class="btn btn-success w-100">Continue</button></a>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 25%;" role="progressbar" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background-color: #e6ffdc;">
+        <div class="container p-3">
+            <h1 class="text-center">Contact</h1>
+            <div class="row">
+                <div class="col-12 mb-2 mt-2">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15301.821303764907!2d80.62639934775396!3d16.503095054189554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fbf82b94a599%3A0xdc51231c5650de95!2sAmigos%20reading%20hall!5e0!3m2!1sen!2sin!4v1762948711218!5m2!1sen!2sin"
+                        width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" style="background-color: #043915; color: #e6ffdc;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-4 col-lg-3 mt-3 d-flex flex-column">
+                    <a>
+                        <h5>COMPANY</h5>
+                    </a>
+                    <a>About Us</a>
+                    <a>Careers</a>
+                    <a>Terms & Privacy</a>
+                    <a>Ad Preferences</a>
+                    <a>Help</a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mt-3 d-flex flex-column">
+                    <a>
+                        <h5>WORK WITH US</h5>
+                    </a>
+                    <a>Authors</a>
+                    <a>Advertise</a>
+                    <a>Authors & Ads blog</a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mt-3 d-flex flex-column foot3">
+                    <a>
+                        <h5>CONNECT</h5>
+                    </a>
+                    <div class="d-flex flex-row"><a><i class="fa-brands fa-square-facebook"></i></a>
+                        <a><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a><i class="fa-brands fa-square-instagram"></i></a>
+                        <a><i class="fa-brands fa-square-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mt-3 d-flex flex-column" style="align-items: center;">
+                    <div class="d-flex felx-row"><a><img src="./styling/images/apple_store.png" alt="" width="120px" class="m-2"></a> 
+                                                 <a><img src="./styling/images/google_play.png" alt="" width="120px" class="m-2"></a>
+                    </div>
+                    <p>© 2025 ShelfWise. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

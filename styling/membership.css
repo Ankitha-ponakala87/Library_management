@@ -1,0 +1,63 @@
+* {
+    /* border: 1px solid black; */
+    font-family: "Lexend Deca", sans-serif;
+}
+
+
+body {
+    background: linear-gradient(#B0CE88, #043915);
+    height: 100vh;
+}
+
+#heading .container {
+    height: 80vh;
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    color: #043915;
+}
+
+.card-header {
+    background-color: #043915;
+    color: #B0CE88;
+    font-size: 20px;
+}
+
+.card {
+    height: 47vh;
+    background-color: #B0CE88;
+    color: #043915;
+    box-shadow: 0px 0px 10px #00040258;
+    border: 0.6px solid #04391582;
+}
+
+.card button {
+    border: none;
+    background-color: #043915;
+    padding: 7px 50px 7px 50px;
+    border-radius: 20px;
+    color: #B0CE88;
+    font-weight: 500;
+}
+
+.card-header {
+    font-weight: 700;
+}
+
+@media (min-width:992px) {
+    
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    body {
+        background: linear-gradient(#B0CE88, #043915);
+        height: 112vh;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(#B0CE88, #043915);
+        height: 160vh;
+    }
+}

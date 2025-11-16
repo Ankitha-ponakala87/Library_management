@@ -1,0 +1,66 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-image:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.07) 0%,
+            rgba(255, 255, 255, 0) 60%
+        ),
+        linear-gradient(
+            to bottom,
+            #B0CE88 0%,
+            #3F843D 55%,
+            #163A15 100%
+        );
+    background-color: #3F843D;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.premium-card {
+    background-color: #daf3c5;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+@media (max-width: 1023px) {
+    .premium-card {
+        border-radius: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .premium-card .header-bg {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+        order: -1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .premium-card {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    
+    .premium-card .header-bg {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 0rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.header-bg {
+    background-color: #2E4B2E;
+}
+
+.text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

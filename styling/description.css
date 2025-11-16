@@ -1,0 +1,89 @@
+@media (min-width: 993px) {
+    .row {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .morehead {
+        margin-left: 25%;
+    }
+
+    .main button {
+        width: 18vw;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    .main button {
+        width: 27vw;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .main button {
+        width: 18vw;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .cover {
+        width: 70vw;
+    }
+
+    .row {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main button {
+        width: 20vw;
+    }
+    .main button {
+        width: 65vw;
+    }
+}
+
+
+.cover {
+    padding: 15px;
+}
+
+.row {
+    margin: 0px -20px 0px -20px;
+}
+
+.ratings {
+    color: rgb(255, 183, 0);
+}
+
+.cover img {
+    box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.649);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 10vw;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.649);
+}
+.main button{
+    border: none;
+    border-radius: 25px;
+    padding: 5px;
+    font-weight: 600;
+}
+.mainbtn button:hover{
+    scale: calc(1.03);
+}
