@@ -6,7 +6,9 @@
     overflow: scroll;
     margin: 5px;
 }
-
+body{
+    background-color: #B0CE88;
+}
 
 @media (min-width: 993px) {
     .card img{
