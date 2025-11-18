@@ -1,5 +1,6 @@
 .form{
-     background-color: #add7ad;
+    background-color: #ffffff34;
+    backdrop-filter: blur(1px);
      /* border:2px solid black; */
      padding:4%;
      border-radius: 20px;
@@ -11,4 +12,31 @@ h6:active{
 body {
     background: linear-gradient(#B0CE88, #043915);
     height: 100vh;
+}
+
+.gif{
+    margin-left: 46%;
+    margin-bottom: -10px;
+    z-index: 5;
+}
+.row{
+    z-index: 1;
+}
+
+@media (min-width: 993px) {
+    .gif img{
+        width: 7vw;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .gif img{
+        width: 12vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .gif img{
+        width: 20vw;
+    }
 }
